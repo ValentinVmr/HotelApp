@@ -6,9 +6,10 @@ pipeline {
         sh 'mvn package'
       }
     }
-    stage('Test') {
+    stage('Test coverage') {
       steps {
-        sh 'mvn test'
+        sh 'mvn cobertura:cobertura'
+        cobertura(coberturaReportFile: '**/target/site/cobertura/coverage.xml')
       }
     }
     stage('Deploy') {
