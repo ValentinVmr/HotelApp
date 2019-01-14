@@ -1,0 +1,21 @@
+pipeline {
+  agent none
+  stages {
+    stage('Build') {
+      steps {
+        sh 'mvn package'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'mvn test'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh '''echo "Deployment done"
+'''
+      }
+    }
+  }
+}
