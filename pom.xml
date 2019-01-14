@@ -9,4 +9,18 @@
     <module>HotelDatabase</module>
     <module>HotelWebapp</module>
   </modules>
+
+  <pluginGroups>
+    <pluginGroup>org.eclipse.jetty</pluginGroup>
+  </pluginGroups>
+
+  <build>
+    <plugins>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.8.1</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
